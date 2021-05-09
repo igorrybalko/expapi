@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express'),
     morgan = require('morgan'),
-    helmet = require('helmet')
+    helmet = require('helmet'),
     mongoSanitize = require('express-mongo-sanitize');
 
 const app = express(),
