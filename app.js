@@ -3,10 +3,7 @@ require('dotenv').config();
 const express = require('express'),
     morgan = require('morgan'),
     helmet = require('helmet'),
-<<<<<<< HEAD
-=======
     fs = require('fs'),
->>>>>>> step-2
     mongoSanitize = require('express-mongo-sanitize');
 
 const app = express(),
