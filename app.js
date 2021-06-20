@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(mongoSanitize());
 
 fs.readdirSync('./routes/').forEach(file => {
-    let fileName = file.substr(0, file.length - 3);
+    let fileName = file.slice(0, -3);
     app.use('/' + fileName, require('./routes/' + fileName));
 });
 
