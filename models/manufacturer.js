@@ -9,7 +9,7 @@ const schema = new db.Schema({
         unique: true,
         trim: true
     },
-    create: {
+    created: {
         type: Date,
         default: Date.now()
     }
