@@ -1,5 +1,5 @@
 const router = require('express').Router(),
-    ctrl = require('../controllers/ManufacturerCtrl');
+    ctrl = require('../controllers/CategoryCtrl');
 
 router.post('/', ctrl.createEntity);
 
