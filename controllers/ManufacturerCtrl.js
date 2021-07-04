@@ -13,11 +13,11 @@ class ManufacturerCtrl extends BaseCtrl {
             title: req.body.title
         });
     
-        manuf.save((err) => {
+        manuf.save((err, data) => {
             if (err) {
                 return res.status(400).json({ message: "Error create manufacturer", err });
             }
-            res.json({ message: "Manufacturer was created" });
+            res.json({ message: "Manufacturer was created", data });
         });
     }
 

@@ -19,7 +19,7 @@ class CategoryCtrl extends BaseCtrl {
             }
             res.json({ 
                 message: "Category was created",
-                id: data._id 
+                data
             });
         });
     }
