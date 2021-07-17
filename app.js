@@ -20,6 +20,13 @@ fs.readdirSync('./routes/').forEach(file => {
     app.use('/' + fileName, require('./routes/' + fileName));
 });
 
+app.use(function (err, req, res, next) {
+
+	let status = err.status || 500;
+	
+	res.status(status).json(err);
+});
+
 app.listen(port, () => {
 	console.log('server started on http://localhost:' + port);
 })

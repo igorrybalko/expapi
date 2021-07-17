@@ -11,8 +11,8 @@ const schema = new db.Schema({
     },
     created: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     }
-});
+}, { versionKey: false });
 
 module.exports = db.model('Manufacturer', schema);
