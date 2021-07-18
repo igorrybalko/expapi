@@ -28,17 +28,10 @@ class ManufacturerCtrl extends BaseCtrl {
         Manufacturer.findByIdAndUpdate(req.params.id, reqBody,  {runValidators: true}, (err, data) => {
             if (err) return res.status(400).json({ message: "Error update", err });
 
-            try {
-
-                res.json({
-                    message: "Updated",
-                    id: data._id
-                });
-
-            } catch(err){
-                
-                next({err, message: "Error update"})
-            }
+            res.json({
+                message: "Updated",
+                id: data._id
+            });
         });
     }
 }

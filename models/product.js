@@ -9,13 +9,10 @@ const schema = new db.Schema({
         trim: true
     },
     price: Number,
+    img: String,
     description: {
         type: String,
         maxlength: 1000
-    },
-    img: {
-        type: String,
-        trim: true
     },
     sku: {
         type: String,
