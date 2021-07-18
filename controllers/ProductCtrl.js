@@ -45,17 +45,17 @@ class ProductCtrl extends BaseCtrl {
                 manuf = await Manufacturer.findById(prod.manufacturer),
                 cat = await Category.findById(prod.category);
                 
-                res.json({
-                    ...prod.toObject(),
-                    category: {
-                        id: cat._id,
-                        title: cat.title
-                    },
-                    manufacturer: {
-                        id: manuf._id,
-                        title: manuf.title 
-                    }
-                });
+            res.json({
+                ...prod.toObject(),
+                category: {
+                    id: cat._id,
+                    title: cat.title
+                },
+                manufacturer: {
+                    id: manuf._id,
+                    title: manuf.title 
+                }
+            });
             
         } catch (err) {
             res.status(400).json({ message: "Error get", err });
